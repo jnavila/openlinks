@@ -1,0 +1,6 @@
+content openlinks	jar:chrome/openlinks.jar!/content/openlinks/
+
+locale  openlinks	en-US	jar:chrome/openlinks.jar!/locale/en-US/openlinks/
+locale  openlinks	fr-FR	jar:chrome/openlinks.jar!/locale/fr-FR/openlinks/
+
+overlay	chrome://browser/content/browser.xul	chrome://openlinks/content/openlinks.xul	application={ec8030f7-c20a-464f-9b0e-13a3a9e97384}
