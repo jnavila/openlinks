@@ -11,7 +11,7 @@
       <Description>
         <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
         <em:minVersion>0.9</em:minVersion>
-        <em:maxVersion>1.5.0.*</em:maxVersion>
+        <em:maxVersion>2.0.0.*</em:maxVersion>
       </Description>
     </em:targetApplication>
     
@@ -21,12 +21,5 @@
     <em:homepageURL>http://avila.nerim.net/</em:homepageURL>
     <!--    <em:optionsURL>chrome://openlinks/content/prefOverlay.xul</em:optionsURL> -->
 
-    <em:file>
-	    <Description about="urn:mozilla:extension:file:openlinks.jar">
-		    <em:package>content/openlinks/</em:package>
-		    <em:locale>locale/en-US/openlinks/</em:locale>
-		    <em:locale>locale/fr-FR/openlinks/</em:locale>
-      </Description>
-    </em:file>
   </Description>      
 </RDF>

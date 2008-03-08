@@ -6,7 +6,6 @@
   xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
   
   <script type="application/x-javascript" src="chrome://openlinks/content/openlinks.js"/>
-  <script type="application/x-javascript" src="chrome://browser/content/metaData.js"/>   
 	<popup id="contentAreaContextMenu">
 	
 		<menuitem id="openlinks" label="&openlinks;"  oncommand="openlinks.openlinks('tab')" />

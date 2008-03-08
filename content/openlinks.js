@@ -35,7 +35,7 @@ var openlinks =
      if ((node.nodeType == node.ELEMENT_NODE)||(node.nodeType == node.DOCUMENT_FRAGMENT_NODE)) {
 	  if ((node.nodeName == "a") || (node.nodeName == "A")) {
 	      if (node.href.length > 0) {
-        	openlinks.openTheLink(getAbsoluteURL(node.href, node),mode);
+        	openlinks.openTheLink(node.href,mode);
 	
 		}
 	  }
