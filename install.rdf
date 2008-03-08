@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+
+  <Description about="urn:mozilla:install-manifest">
+    <em:id>{0db34fe6-3e0e-4e0a-bce9-90c4816172cc}</em:id>
+    <em:version>0.0.1</em:version>
+
+    <em:targetApplication>
+      <Description>
+        <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
+        <em:minVersion>0.9</em:minVersion>
+        <em:maxVersion>1.0</em:maxVersion>
+      </Description>
+    </em:targetApplication>
+    
+    <em:name>Open Links</em:name>
+    <em:description>Open links of the selection in tabs</em:description>
+    <em:creator>Jean-Noel Avila</em:creator>
+    <em:homepageURL>http://avila.nerim.net/</em:homepageURL>
+    <!--    <em:optionsURL>chrome://openlinks/content/prefOverlay.xul</em:optionsURL> -->
+
+    <em:file>
+	    <Description about="urn:mozilla:extension:file:openlinks.jar">
+		    <em:package>content/openlinks/</em:package>
+		    <em:locale>locale/en-US/openlinks/</em:locale>
+		    <em:locale>locale/fr-FR/openlinks/</em:locale>
+      </Description>
+    </em:file>
+  </Description>      
+</RDF>
