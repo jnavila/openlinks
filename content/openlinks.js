@@ -22,32 +22,89 @@ var openlinks =
 
   openlinks: function(mode)
   {
-    //  var sel = openlinks.getSelection;
-	var sel = document.commandDispatcher.focusedWindow.getSelection();
+      var sel = document.commandDispatcher.focusedWindow.getSelection();
       for ( var i = 0; i < sel.rangeCount; i++ ) {
 	  var theDocFrag = sel.getRangeAt(i).cloneContents();
-	  openlinks.recurseAndOpen(theDocFrag,mode);
+	  if (mode == "smart"){
+	      openlinks.smartOpen(theDocFrag,mode);
+	  }
+	  else {
+	      openlinks.recurseAndOpen(theDocFrag);
+	  }
       }     
   },
 
-  recurseAndOpen:function(node ,mode) 
+  recurseAndOpen:function(node, mode) 
   {
      if ((node.nodeType == node.ELEMENT_NODE)||(node.nodeType == node.DOCUMENT_FRAGMENT_NODE)) {
 	  if ((node.nodeName == "a") || (node.nodeName == "A")) {
 	      if (node.href.length > 0) {
-        	openlinks.openTheLink(node.href,mode);
+        	this.openTheLink(node.href,mode);
 	
 		}
 	  }
 	  else {
 	      var child =node.firstChild;
 	      while (child) {
-		  openlinks.recurseAndOpen(child,mode);
+		  this.recurseAndOpen(child,mode);
 		  child = child.nextSibling;
 	      }
 	  }
       } 
   },
+      
+  /*  buildBasePath:function(node,chainList)
+  {
+      var child =node.firstChild;
+      while (child) {
+	  if (this.buildBasePath(node)){
+	      chainList.push(child);
+	      return true;
+	  }
+	  child = child.nextSibling;
+      }
+      return false;
+  },
+  */
+ 
+  openFirstLink:function(node)
+  {
+     if ((node.nodeType == node.ELEMENT_NODE)||(node.nodeType == node.DOCUMENT_FRAGMENT_NODE)) {
+	  if ((node.nodeName == "a") || (node.nodeName == "A")) {
+	      if (node.href.length > 0) {
+        	this.openTheLink(node.href,"tab");
+		return true;
+		}
+	  }
+	  else {
+	      var child =node.firstChild;
+	      while (child) {
+		  if (this.openFirstLink(child)){
+		      return true;
+		  }
+		  child = child.nextSibling;
+	      }
+	      return false;
+	  }
+      } 
+  },
+
+  smartOpen:function(node, mode)
+  {
+      //   var chainList = new Array();
+      var mynode = node;
+      while ((!mynode)||
+	     (mynode.childNodes.length<3)||
+	     (mynode.childNodes[0].name!=mynode.childNodes[1].name)||
+	     (mynode.childNodes[0].name!=mynode.childNodes[2].name)){
+	  mynode = mynode.firstChild;
+      } 
+      var child = mynode.firstChild;
+      while (child) {
+	  this.openFirstLink(child);
+	  child = child.nextSibling;
+      }
+ },
 
   openTheLink: function(url,mode)
   {
@@ -58,9 +115,13 @@ var openlinks =
   showMenuItem: function()
   {
     if(gContextMenu){
-      var menuitem = document.getElementById("openlinks");
-      if(menuitem) {
-        menuitem.hidden = !gContextMenu.isTextSelected;
+      var menuitemOpenlinks = document.getElementById("openlinks");
+      if(menuitemOpenlinks) {
+        menuitemOpenlinks.hidden = !gContextMenu.isTextSelected;
+      }
+      var menuitemOpenlinksSmart = document.getElementById("openlinksSmart");
+      if(menuitemOpenlinksSmart) {
+        menuitemOpenlinksSmart.hidden = !gContextMenu.isTextSelected;
       }
     }
   }
