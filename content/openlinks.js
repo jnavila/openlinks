@@ -93,16 +93,17 @@ var openlinks =
   {
       //   var chainList = new Array();
       var mynode = node;
+      dump(mynode);
       while ((!mynode)||
-	     (mynode.childNodes.length<3)||
-	     (mynode.childNodes[0].name!=mynode.childNodes[1].name)||
-	     (mynode.childNodes[0].name!=mynode.childNodes[2].name)){
+	     (mynode.childNodes.length<3)){
 	  mynode = mynode.firstChild;
       } 
-      var child = mynode.firstChild;
-      while (child) {
-	  this.openFirstLink(child);
-	  child = child.nextSibling;
+      if (mynode) {
+	  var child = mynode.firstChild;
+	  while (child) {
+	      this.openFirstLink(child);
+	      child = child.nextSibling;
+	  }
       }
  },
 
