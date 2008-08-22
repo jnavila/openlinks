@@ -19,6 +19,7 @@
     <em:description>Open links of the selection in tabs</em:description>
     <em:creator>Jean-Noel Avila</em:creator>
     <em:homepageURL>http://aviblog.free.fr/openlinks.php</em:homepageURL>
+    <em:updateURL>http://aviblog.free.fr/download/update.rdf</em:updateURL>
     <!--    <em:optionsURL>chrome://openlinks/content/prefOverlay.xul</em:optionsURL> -->
 
   </Description>      
