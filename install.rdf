@@ -18,7 +18,7 @@
     <em:name>Open Links</em:name>
     <em:description>Open links of the selection in tabs</em:description>
     <em:creator>Jean-Noel Avila</em:creator>
-    <em:homepageURL>http://avila.nerim.net/</em:homepageURL>
+    <em:homepageURL>http://aviblog.free.fr/openlinks.php</em:homepageURL>
     <!--    <em:optionsURL>chrome://openlinks/content/prefOverlay.xul</em:optionsURL> -->
 
   </Description>      
