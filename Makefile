@@ -1,11 +1,12 @@
 CONTENT_PATH = content
 LOCALE_PATH = locale/*
-VERSION = 0.0.6
+VERSION = 0.0.5
 
 CONTENT_FILE = $(CONTENT_PATH) \
 	       $(CONTENT_PATH)/openlinks.xul \
 	       $(CONTENT_PATH)/openlinks.js \
-	       $(CONTENT_PATH)/license.txt
+	       $(CONTENT_PATH)/license.txt \
+               $(CONTENT_PATH)/icone.png
 
 LOCALE_FILE =  $(LOCALE_PATH)/openlinks.dtd
 
