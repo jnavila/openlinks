@@ -1,6 +1,6 @@
 CONTENT_PATH = content
 LOCALE_PATH = locale/*
-VERSION = 0.0.5
+VERSION = 0.0.6
 
 CONTENT_FILE = $(CONTENT_PATH) \
 	       $(CONTENT_PATH)/openlinks.xul \
@@ -27,6 +27,6 @@ clean:
 
 publish: all
 	mv openlinks.xpi openlinks-$(VERSION).xpi
-	ncftpput -f ftp.config download openlinks-$(VERSION).xpi 
-	ncftpput -f ftp.config download update.rdf 
+	ncftpput -f ftp.config -u aviblog downloads openlinks-$(VERSION).xpi 
+	ncftpput -f ftp.config -u aviblog downloads update.rdf 
 

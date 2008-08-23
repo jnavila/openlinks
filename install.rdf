@@ -5,7 +5,7 @@
 
   <Description about="urn:mozilla:install-manifest">
     <em:id>{0db34fe6-3e0e-4e0a-bce9-90c4816172cc}</em:id>
-    <em:version>0.0.5</em:version>
+    <em:version>0.0.6</em:version>
 
     <em:targetApplication>
       <Description>
@@ -19,7 +19,8 @@
     <em:description>Open links of the selection in tabs</em:description>
     <em:creator>Jean-Noel Avila</em:creator>
     <em:homepageURL>http://aviblog.free.fr/openlinks.php</em:homepageURL>
-    <em:updateURL>http://aviblog.free.fr/download/update.rdf</em:updateURL>
+    <em:updateURL>http://aviblog.free.fr/downloads/update.rdf</em:updateURL>
+    <em:updateKey>MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDAbUkxEfOYOFy0f657HjhCKtAWvUeGNNtmhu+QnSr/yTHmIU8uh508VM6xQtMKc5BbKkRknfhOT5jmcAikKAWtzh3n//BFaim8eZMrsKHVF3EZWMOZUWA0bRE/rosNOx2hfLd8668XpKdfubhl/ZhvKXAOq3iFvIlxT6pyR9RZVwIDAQAB</em:updateKey>
     <em:iconURL>chrome://openlinks/content/icone.png</em:iconURL>
     <!--    <em:optionsURL>chrome://openlinks/content/prefOverlay.xul</em:optionsURL> -->
 
