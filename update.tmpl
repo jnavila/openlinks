@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+
+	<rdf:Description rdf:about="urn:mozilla:extension:{0db34fe6-3e0e-4e0a-bce9-90c4816172cc}">
+		<em:updates><!--Indique les mises à jour disponibles-->
+			<rdf:Seq>
+				<rdf:li rdf:resource="rdf:update"/>
+			</rdf:Seq>
+ 		</em:updates>
+	</rdf:Description>
+
+	<!--Détails sur les mises à jour indiquées-->
+	<rdf:Description rdf:about="rdf:update">
+		<em:version>###VERSION###</em:version>
+		<em:targetApplication>
+			<rdf:Description>
+				<em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
+				<em:minVersion>###FF_MIN_VERSION###</em:minVersion>
+				<em:maxVersion>###FF_MAX_VERSION###</em:maxVersion>
+				<em:updateLink>http://aviblog.free.fr/downloads/openlinks-###VERSION###.xpi</em:updateLink>
+				<em:updateHash>sha1:###SHA1###</em:updateHash>
+ 			</rdf:Description>
+ 		</em:targetApplication>
+	</rdf:Description>
+
+</rdf:RDF>
