@@ -43,7 +43,7 @@ clean:
 
 publish: all
 	${Q}cp -f openlinks.xpi openlinks-$(VERSION).xpi
-	${Q}echo "Please sign the extension openlinks-$(VERSION), then press enter"
+	${Q}echo "Please sign the update manifesto update.rdf , then press enter"
 	${Q}read dummy
 	ncftpput -f ftp.config -u aviblog downloads openlinks-$(VERSION).xpi 
 	ncftpput -f ftp.config -u aviblog downloads update.rdf 
